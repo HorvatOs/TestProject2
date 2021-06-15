@@ -1,0 +1,15 @@
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.deps.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.csprojAssemblyReference.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.AssemblyInfoInputs.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.AssemblyInfo.cs
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Model.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Model.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.csproj.CopyComplete
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.runtimeconfig.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.runtimeconfig.dev.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.genruntimeconfig.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.csproj.CoreCompileInputs.cache

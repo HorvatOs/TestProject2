@@ -1,0 +1,12 @@
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\bin\Debug\netcoreapp3.1\Vehicle.Model.deps.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\bin\Debug\netcoreapp3.1\Vehicle.Model.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\bin\Debug\netcoreapp3.1\Vehicle.Model.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.csprojAssemblyReference.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.AssemblyInfoInputs.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.AssemblyInfo.cs
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\bin\Debug\netcoreapp3.1\Vehicle.Model.runtimeconfig.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\bin\Debug\netcoreapp3.1\Vehicle.Model.runtimeconfig.dev.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.genruntimeconfig.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Model\obj\Debug\netcoreapp3.1\Vehicle.Model.csproj.CoreCompileInputs.cache

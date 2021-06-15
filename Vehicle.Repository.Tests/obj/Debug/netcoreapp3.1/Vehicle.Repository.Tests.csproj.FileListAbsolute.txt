@@ -1,0 +1,17 @@
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Tests.deps.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Tests.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Tests.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.AssemblyInfoInputs.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.AssemblyInfo.cs
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Model.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Model.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.csprojAssemblyReference.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.csproj.CopyComplete
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Tests.runtimeconfig.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\bin\Debug\netcoreapp3.1\Vehicle.Repository.Tests.runtimeconfig.dev.json
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.genruntimeconfig.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Tests\obj\Debug\netcoreapp3.1\Vehicle.Repository.Tests.csproj.CoreCompileInputs.cache
