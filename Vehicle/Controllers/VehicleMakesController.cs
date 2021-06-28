@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
+using Vehicle.Service.Service;
 using Vehicle.WebAPI.Dtos;
 
 namespace Vehicle.WebAPI.Controllers
@@ -15,28 +16,28 @@ namespace Vehicle.WebAPI.Controllers
     [ApiController]
     public class VehicleMakesController : Controller
     {
-        private readonly IMakeRepository _vehicleMakeRepository;
+        private readonly VehicleMakeService _vehicleMakeService;
 
         public IMapper _mapper { get; }
 
-        public VehicleMakesController(IMakeRepository vehicleMakeRepository, IMapper mapper)
+        public VehicleMakesController(VehicleMakeService vehicleMakeService, IMapper mapper)
         {
-            _vehicleMakeRepository = vehicleMakeRepository;
+            _vehicleMakeService = vehicleMakeService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakes()
+        public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakesAsync()
         {
-            var makeItems = await _vehicleMakeRepository.GetAllMakes();
+            var makeItems = await _vehicleMakeService.GetAllMakesServiceAsync();
             return Ok(_mapper.Map<IEnumerable<MakeReadDto>>(makeItems));
         }
 
         [HttpGet("{id}", Name = "GetMakeById")]
-        public async Task<ActionResult<MakeReadDto>> GetMakeById(int? id)
+        public async Task<ActionResult<MakeReadDto>> GetMakeByIdAsync(int id)
         {
 
-            var makeItem = await _vehicleMakeRepository.GetMakeById(id);
+            var makeItem = await _vehicleMakeService.GetMakeByIdServiceAsync(id);
             if (makeItem != null)
             {
                 return Ok(_mapper.Map<MakeReadDto>(makeItem));
@@ -45,23 +46,23 @@ namespace Vehicle.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<MakeReadDto>> CreateMake(MakeCreateDto makeCreateDto)
+        public async Task<ActionResult<MakeReadDto>> CreateMakeAsync(MakeCreateDto makeCreateDto)
         {
             var makeModel = _mapper.Map<VehicleMake>(makeCreateDto);
-            await _vehicleMakeRepository.CreateMake(makeModel);
+            await _vehicleMakeService.CreateMakeServiceAsync(makeModel);
 
             var makeReadDto = _mapper.Map<MakeReadDto>(makeModel);
 
-            return CreatedAtRoute(nameof(GetMakeById), new { Id = makeReadDto.Id }, makeReadDto);
+            return CreatedAtRoute(nameof(GetMakeByIdAsync), new { Id = makeReadDto.Id }, makeReadDto);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateMake(int id, MakeUpdateDto makeUpdateDto)
+        public async Task<ActionResult> UpdateMakeAsync(int id, MakeUpdateDto makeUpdateDto)
         {
             try
             {
                 var makeFromRepo = _mapper.Map<MakeUpdateDto, VehicleMake>(makeUpdateDto);
-                var numberOfChanges = await _vehicleMakeRepository.UpdateMake(makeFromRepo);
+                var numberOfChanges = await _vehicleMakeService.UpdateMakeServiceAsync(makeFromRepo);
             }
             catch (Exception)
             {
@@ -71,14 +72,14 @@ namespace Vehicle.WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteMake(int? id)
+        public async Task<ActionResult> DeleteMakeAsync(int id)
         {
-            var makeIdFromRepo = _vehicleMakeRepository.GetMakeById(id);
+            var makeIdFromRepo = _vehicleMakeService.GetMakeByIdServiceAsync(id);
             if (makeIdFromRepo == null)
             {
                 return NotFound();
             }
-            await _vehicleMakeRepository.DeleteMake(id);
+            await _vehicleMakeService.DeleteMakeServiceAsync(id);
 
             return NoContent();
         }

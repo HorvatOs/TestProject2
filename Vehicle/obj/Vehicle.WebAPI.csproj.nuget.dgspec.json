@@ -4,6 +4,88 @@
     "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle\\Vehicle.WebAPI.csproj": {}
   },
   "projects": {
+    "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj",
+        "projectName": "Vehicle.Common",
+        "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj",
+        "packagesPath": "C:\\Users\\FearZone\\.nuget\\packages\\",
+        "outputPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\FearZone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -65,6 +147,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -86,14 +172,14 @@
         }
       }
     },
-    "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
+    "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model.Common\\Vehicle.Model.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj",
-        "projectName": "Vehicle.Model",
-        "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj",
+        "projectUniqueName": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model.Common\\Vehicle.Model.Common.csproj",
+        "projectName": "Vehicle.Model.Common",
+        "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model.Common\\Vehicle.Model.Common.csproj",
         "packagesPath": "C:\\Users\\FearZone\\.nuget\\packages\\",
-        "outputPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\obj\\",
+        "outputPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FearZone\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,6 +229,96 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj",
+        "projectName": "Vehicle.Model",
+        "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj",
+        "packagesPath": "C:\\Users\\FearZone\\.nuget\\packages\\",
+        "outputPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\FearZone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model.Common\\Vehicle.Model.Common.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model.Common\\Vehicle.Model.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -187,6 +363,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj"
+              },
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj"
               }
@@ -225,6 +404,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -307,6 +490,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -351,6 +538,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj"
+              },
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj"
               },
@@ -395,6 +585,99 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Service\\Vehicle.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Service\\Vehicle.Service.csproj",
+        "projectName": "Vehicle.Service",
+        "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Service\\Vehicle.Service.csproj",
+        "packagesPath": "C:\\Users\\FearZone\\.nuget\\packages\\",
+        "outputPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\FearZone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository.Common\\Vehicle.Repository.Common.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository.Common\\Vehicle.Repository.Common.csproj"
+              },
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository\\Vehicle.Repository.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository\\Vehicle.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -442,14 +725,11 @@
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj"
               },
-              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository.Common\\Vehicle.Repository.Common.csproj": {
-                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository.Common\\Vehicle.Repository.Common.csproj"
-              },
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository.Tests\\Vehicle.Repository.Tests.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository.Tests\\Vehicle.Repository.Tests.csproj"
               },
-              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository\\Vehicle.Repository.csproj": {
-                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Repository\\Vehicle.Repository.csproj"
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Service\\Vehicle.Service.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Service\\Vehicle.Service.csproj"
               }
             }
           }
@@ -486,6 +766,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [

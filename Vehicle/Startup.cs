@@ -35,8 +35,8 @@ namespace Vehicle
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddScoped<IMakeRepository, SqlMakeRepository>();
-            services.AddScoped<IModelRepository, SqlModelRepository>();
+            services.AddScoped<IMakeRepository, VehicleMakeRepository>();
+            services.AddScoped<IModelRepository, VehicleModelRepository>();
 
         }
 

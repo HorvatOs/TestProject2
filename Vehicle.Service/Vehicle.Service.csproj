@@ -16,6 +16,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ReflectionIT.Mvc.Paging" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vehicle.Repository.Common\Vehicle.Repository.Common.csproj" />
+    <ProjectReference Include="..\Vehicle.Repository\Vehicle.Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,4 +12,8 @@ E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Ve
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.runtimeconfig.json
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Repository.Common.runtimeconfig.dev.json
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.genruntimeconfig.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Model.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Model.Common.pdb
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\bin\Debug\netcoreapp3.1\Vehicle.Common.pdb
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Repository.Common\obj\Debug\netcoreapp3.1\Vehicle.Repository.Common.csproj.CoreCompileInputs.cache
