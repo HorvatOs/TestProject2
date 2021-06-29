@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Vehicle.DAL.Data
 {
     public class VehicleContext : DbContext
     {
+
         public VehicleContext(DbContextOptions<VehicleContext> options)
             : base(options)
         {

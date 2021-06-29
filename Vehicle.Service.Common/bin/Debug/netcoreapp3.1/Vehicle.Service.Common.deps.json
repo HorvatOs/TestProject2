@@ -13,7 +13,9 @@
           "Microsoft.EntityFrameworkCore.Design": "5.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.7",
-          "ReflectionIT.Mvc.Paging": "3.1.0"
+          "ReflectionIT.Mvc.Paging": "3.1.0",
+          "Vehicle.Common": "1.0.0",
+          "Vehicle.Model": "1.0.0"
         },
         "runtime": {
           "Vehicle.Service.Common.dll": {}
@@ -2243,6 +2245,40 @@
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.3.0"
         }
+      },
+      "Vehicle.Common/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0"
+        },
+        "runtime": {
+          "Vehicle.Common.dll": {}
+        }
+      },
+      "Vehicle.Model/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0",
+          "Vehicle.Model.Common": "1.0.0"
+        },
+        "runtime": {
+          "Vehicle.Model.dll": {}
+        }
+      },
+      "Vehicle.Model.Common/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0"
+        },
+        "runtime": {
+          "Vehicle.Model.Common.dll": {}
+        }
       }
     }
   },
@@ -3644,6 +3680,21 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Vehicle.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vehicle.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vehicle.Model.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

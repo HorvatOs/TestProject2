@@ -19,7 +19,6 @@ namespace Vehicle.Model.Models
         public int MakeId { get; set; }
 
         [ForeignKey("MakeId")]
-        public VehicleMake VehicleMake { get; set; }
-        IVehicleMake IVehicleModel.VehicleMake { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IVehicleMake VehicleMake { get; set; }
     }
 }

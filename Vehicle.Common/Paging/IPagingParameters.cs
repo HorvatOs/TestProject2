@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Vehicle.Common.Paiging
 {
-    public class IPagingParameters
+    public interface IPagingParameters
     {
         public int PageSize { get; set; }
         public int PageNumber { get; set; }

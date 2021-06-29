@@ -23,3 +23,5 @@ E:\CODE\Vehicle.API\Vehicle\Vehicle.Service\obj\Debug\netcoreapp3.1\Vehicle.Serv
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Service\bin\Debug\netcoreapp3.1\Vehicle.Common.dll
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Service\bin\Debug\netcoreapp3.1\Vehicle.Common.pdb
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Service\obj\Debug\netcoreapp3.1\Vehicle.Service.csproj.CoreCompileInputs.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Service\bin\Debug\netcoreapp3.1\Vehicle.Service.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Service\bin\Debug\netcoreapp3.1\Vehicle.Service.Common.pdb

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Vehicle.Common.Paging;
 using Vehicle.Common.Paiging;
 using Vehicle.DAL.Data;
 using Vehicle.Model.Models;
@@ -26,7 +27,7 @@ namespace Vehicle.Repository.Models
             return numberOfCreated;
         }
 
-        public async Task<int> DeleteMakeAsync(int? id)
+        public async Task<int> DeleteMakeAsync(int id)
         {
             var vehicleMake = await _db.VehicleMakes.FirstOrDefaultAsync(x => x.Id == id);
             if (vehicleMake == null)
@@ -40,13 +41,14 @@ namespace Vehicle.Repository.Models
 
         public async Task<IEnumerable<VehicleMake>> GetAllMakesAsync(PagingParameters pagingParameters)
         {
-            var pageSize = pagingParameters.pageSize;
-            var pageNumber = pagingParameters.pageNumber;
+            var pageSize = pagingParameters.PageSize;
+            var pageNumber = pagingParameters.PageNumber;
 
-            return await _db.VehicleMakes.Skip((pageNumber-1)*pageSize).Take(pageSize).ToListAsync();
+            return await _db.VehicleMakes.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
-        public async Task<VehicleMake> GetMakeByIdAsync(int? id)
+
+        public async Task<VehicleMake> GetMakeByIdAsync(int id)
         {
             var vehicleMake = await _db.VehicleMakes.FirstOrDefaultAsync(m => m.Id == id);
             if (vehicleMake == null)

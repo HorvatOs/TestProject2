@@ -19,4 +19,9 @@
     <PackageReference Include="ReflectionIT.Mvc.Paging" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Vehicle.Common\Vehicle.Common.csproj" />
+    <ProjectReference Include="..\Vehicle.Model\Vehicle.Model.csproj" />
+  </ItemGroup>
+
 </Project>

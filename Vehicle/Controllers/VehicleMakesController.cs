@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Vehicle.Common.Paging;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
+using Vehicle.Service.Common.Interface;
 using Vehicle.Service.Service;
 using Vehicle.WebAPI.Dtos;
 
@@ -16,20 +18,20 @@ namespace Vehicle.WebAPI.Controllers
     [ApiController]
     public class VehicleMakesController : Controller
     {
-        private readonly VehicleMakeService _vehicleMakeService;
+        private readonly IVehicleMakeService _vehicleMakeService;
 
         public IMapper _mapper { get; }
 
-        public VehicleMakesController(VehicleMakeService vehicleMakeService, IMapper mapper)
+        public VehicleMakesController(IVehicleMakeService vehicleMakeService, IMapper mapper)
         {
             _vehicleMakeService = vehicleMakeService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakesAsync()
+        public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakesAsync(PagingParameters pagingParameters)
         {
-            var makeItems = await _vehicleMakeService.GetAllMakesServiceAsync();
+            var makeItems = await _vehicleMakeService.GetAllMakesServiceAsync(pagingParameters);
             return Ok(_mapper.Map<IEnumerable<MakeReadDto>>(makeItems));
         }
 

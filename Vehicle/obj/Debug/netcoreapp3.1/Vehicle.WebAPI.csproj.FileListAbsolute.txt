@@ -91,3 +91,5 @@ E:\CODE\Vehicle.API\Vehicle\Vehicle\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Pag
 E:\CODE\Vehicle.API\Vehicle\Vehicle\obj\Debug\netcoreapp3.1\Vehicle.WebAPI.csproj.CoreCompileInputs.cache
 E:\CODE\Vehicle.API\Vehicle\Vehicle\obj\Debug\netcoreapp3.1\Vehicle.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 E:\CODE\Vehicle.API\Vehicle\Vehicle\obj\Debug\netcoreapp3.1\Vehicle.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+E:\CODE\Vehicle.API\Vehicle\Vehicle\bin\Debug\netcoreapp3.1\Vehicle.Service.Common.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle\bin\Debug\netcoreapp3.1\Vehicle.Service.Common.pdb

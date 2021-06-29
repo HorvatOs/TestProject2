@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Vehicle.Common.Paiging;
 
-namespace Vehicle.Common.Paiging
+namespace Vehicle.Common.Paging
 {
     public class PagingParameters : IPagingParameters
     {

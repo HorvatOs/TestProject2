@@ -3097,6 +3097,55 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Vehicle.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Vehicle.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vehicle.Common.dll": {}
+        }
+      },
+      "Vehicle.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0",
+          "Vehicle.Model.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Vehicle.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vehicle.Model.dll": {}
+        }
+      },
+      "Vehicle.Model.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Vehicle.Model.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vehicle.Model.Common.dll": {}
+        }
       }
     }
   },
@@ -9508,6 +9557,21 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Vehicle.Common/1.0.0": {
+      "type": "project",
+      "path": "../Vehicle.Common/Vehicle.Common.csproj",
+      "msbuildProject": "../Vehicle.Common/Vehicle.Common.csproj"
+    },
+    "Vehicle.Model/1.0.0": {
+      "type": "project",
+      "path": "../Vehicle.Model/Vehicle.Model.csproj",
+      "msbuildProject": "../Vehicle.Model/Vehicle.Model.csproj"
+    },
+    "Vehicle.Model.Common/1.0.0": {
+      "type": "project",
+      "path": "../Vehicle.Model.Common/Vehicle.Model.Common.csproj",
+      "msbuildProject": "../Vehicle.Model.Common/Vehicle.Model.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9517,7 +9581,9 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.7",
-      "ReflectionIT.Mvc.Paging >= 3.1.0"
+      "ReflectionIT.Mvc.Paging >= 3.1.0",
+      "Vehicle.Common >= 1.0.0",
+      "Vehicle.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9545,7 +9611,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
+              "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj"
+            },
+            "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
+              "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

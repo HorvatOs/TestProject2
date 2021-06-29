@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Vehicle.Common.Paging;
+using Vehicle.Common.Paiging;
 using Vehicle.Model.Common.Interface;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 using Vehicle.Repository.Models;
+using Vehicle.Service.Common.Interface;
 
 namespace Vehicle.Service.Service
 {
-    public class VehicleMakeService
+    public class VehicleMakeService : IVehicleMakeService
     {
         public VehicleMakeService(IMakeRepository vehicleMakeRepository)
         {
@@ -20,7 +23,7 @@ namespace Vehicle.Service.Service
 
 
 
-        public async Task<IVehicleMake> GetMakeByIdServiceAsync (int id)
+        public async Task<VehicleMake> GetMakeByIdServiceAsync (int id)
         {
             return await VehicleMakeRepository.GetMakeByIdAsync(id);
         }
@@ -35,9 +38,9 @@ namespace Vehicle.Service.Service
             return await VehicleMakeRepository.DeleteMakeAsync(id);
         }
 
-        public async Task<IEnumerable<VehicleMake>> GetAllMakesServiceAsync()
+        public async Task<IEnumerable<VehicleMake>> GetAllMakesServiceAsync(PagingParameters pagingParameters)
         {
-            return await VehicleMakeRepository.GetAllMakesAsync();
+            return await VehicleMakeRepository.GetAllMakesAsync(pagingParameters);
         }
 
         public async Task<int> UpdateMakeServiceAsync (VehicleMake vehicleMake)

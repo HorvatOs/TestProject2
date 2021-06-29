@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
+using Vehicle.Service.Common.Interface;
 using Vehicle.WebAPI.Dtos;
 
 namespace Vehicle.WebAPI.Controllers
@@ -15,28 +16,28 @@ namespace Vehicle.WebAPI.Controllers
     [ApiController]
     public class VehicleModelsController : Controller
     {
-        private readonly IModelRepository _vehicleModelRepository;
+        private readonly IVehicleModelService _vehicleModelService;
 
         public IMapper _mapper { get; }
 
-        public VehicleModelsController(IModelRepository vehicleModelRepository, IMapper mapper)
+        public VehicleModelsController(IVehicleModelService vehicleModelService, IMapper mapper)
         {
-            _vehicleModelRepository = vehicleModelRepository;
+            _vehicleModelService = vehicleModelService;
             _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAllModels(int makeId)
+        public async Task<ActionResult> GetAllModelsAsync(int makeId)
         {
-            var modelItems = await _vehicleModelRepository.GetAllModels(makeId);
+            var modelItems = await _vehicleModelService.GetAllModelsServiceAsync(makeId);
             return Ok(_mapper.Map<IEnumerable<ModelReadDto>>(modelItems));
         }
 
         [HttpGet("{id}", Name = "GetModelById")]
-        public ActionResult<ModelReadDto> GetModelById(int id)
+        public async Task<ActionResult<ModelReadDto>> GetModelByIdAsync(int id)
         {
 
-            var modelItem = _vehicleModelRepository.GetModelById(id);
+            var modelItem = await _vehicleModelService.GetModelByIdServiceAsync(id);
             if (modelItem != null)
             {
                 return Ok(_mapper.Map<ModelReadDto>(modelItem));
@@ -45,23 +46,23 @@ namespace Vehicle.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ModelReadDto>> CreateModel(ModelCreateDto modelCreateDto)
+        public async Task<ActionResult<ModelReadDto>> CreateModelAsync(ModelCreateDto modelCreateDto)
         {
             var modelModel = _mapper.Map<VehicleModel>(modelCreateDto);
-            await _vehicleModelRepository.CreateModel(modelModel);
+            await _vehicleModelService.CreateModelServiceAsync(modelModel);
 
             var modelReadDto = _mapper.Map<ModelReadDto>(modelModel);
 
-            return CreatedAtRoute(nameof(GetModelById), new { modelReadDto.Id }, modelReadDto);
+            return CreatedAtRoute(nameof(GetModelByIdAsync), new { modelReadDto.Id }, modelReadDto);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateModel(int id, ModelUpdateDto modelUpdateDto)
+        public async Task<ActionResult> UpdateModelAsync(int id, ModelUpdateDto modelUpdateDto)
         {
             try
             {
                 var modelFromRepo = _mapper.Map<ModelUpdateDto, VehicleModel>(modelUpdateDto);
-                var numberOfChanges = await _vehicleModelRepository.UpdateModel(modelFromRepo);
+                var numberOfChanges = await _vehicleModelService.UpdateModelServiceAsync(modelFromRepo);
             }
             catch (Exception)
             {
@@ -71,14 +72,14 @@ namespace Vehicle.WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteModel(int? id)
+        public async Task<ActionResult> DeleteModelAsync(int id)
         {
-            var modelIdFromRepo = _vehicleModelRepository.GetModelById(id);
+            var modelIdFromRepo = _vehicleModelService.GetModelByIdServiceAsync(id);
             if (modelIdFromRepo == null)
             {
                 return NotFound();
             }
-            await _vehicleModelRepository.DeleteModel(id);
+            await _vehicleModelService.DeleteModelServiceAsync(id);
             return NoContent();
         }
     }

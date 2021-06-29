@@ -19,14 +19,14 @@ namespace Vehicle.Repository.Models
             _db = db;
         }
 
-        public async Task<int> CreateModel(VehicleModel vehicleModel)
+        public async Task<int> CreateModelAsync(VehicleModel vehicleModel)
         {
             _db.Add(vehicleModel);
             var numberOfCreated = await _db.SaveChangesAsync();
             return numberOfCreated;
         }
 
-        public async Task<int> DeleteModel(int? id)
+        public async Task<int> DeleteModelAsync(int id)
         {
             var vehicleModel = await _db.VehicleModels.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -36,22 +36,22 @@ namespace Vehicle.Repository.Models
 
         }
 
-        public async Task<IEnumerable<VehicleModel>> GetAllModels(int makeId)
+        public async Task<IEnumerable<VehicleModel>> GetAllModelsAsync(int makeId)
         {
             return await _db.VehicleModels.ToListAsync();
         }
 
 
-        public async Task<VehicleModel> GetModelById(int? id)
+        public async Task<VehicleModel> GetModelByIdAsync(int id)
         {
             var vehicleModel = await _db.VehicleModels.FirstOrDefaultAsync(o => o.Id == id);
             if (vehicleModel == null)
             {
-                throw new ArgumentNullException();
+                throw new Exception();
             }
             return vehicleModel;
         }
-        public async Task<VehicleMake> GetVehicleMake(int? id)
+        public async Task<VehicleMake> GetVehicleMakeAsync(int id)
         {
             var vehicleMake = await _db.VehicleMakes
                .FirstOrDefaultAsync(m => m.Id == id);
@@ -62,10 +62,10 @@ namespace Vehicle.Repository.Models
             return vehicleMake;
         }
 
-        public Task<int> UpdateModel(VehicleModel vehicleModel)
+        public async Task<int> UpdateModelAsync(VehicleModel vehicleModel)
         {
             _db.Update(vehicleModel);
-            var numberOfChanges = _db.SaveChangesAsync();
+            var numberOfChanges = await _db.SaveChangesAsync();
 
             return numberOfChanges;
         }

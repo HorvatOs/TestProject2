@@ -12,8 +12,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Vehicle.DAL.Data;
+using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 using Vehicle.Repository.Models;
+using Vehicle.Service.Common.Interface;
+using Vehicle.Service.Service;
 
 namespace Vehicle
 {
@@ -35,8 +38,10 @@ namespace Vehicle
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddScoped<IMakeRepository, VehicleMakeRepository>();
-            services.AddScoped<IModelRepository, VehicleModelRepository>();
+            services.AddTransient<IMakeRepository, VehicleMakeRepository>();
+            services.AddTransient<IModelRepository, VehicleModelRepository>();
+            services.AddTransient<IVehicleMakeService, VehicleMakeService>();
+            services.AddTransient<IVehicleModelService, VehicleModelService>();
 
         }
 

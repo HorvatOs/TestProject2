@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Vehicle.Repository.Common\Vehicle.Repository.Common.csproj" />
     <ProjectReference Include="..\Vehicle.Repository\Vehicle.Repository.csproj" />
+    <ProjectReference Include="..\Vehicle.Service.Common\Vehicle.Service.Common.csproj" />
   </ItemGroup>
 
 </Project>
