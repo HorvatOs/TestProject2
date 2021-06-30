@@ -17,3 +17,5 @@ E:\CODE\Vehicle.API\Vehicle\Vehicle.Service.Common\bin\Debug\netcoreapp3.1\Vehic
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Service.Common\bin\Debug\netcoreapp3.1\Vehicle.Model.pdb
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Service.Common\bin\Debug\netcoreapp3.1\Vehicle.Model.Common.pdb
 E:\CODE\Vehicle.API\Vehicle\Vehicle.Service.Common\obj\Debug\netcoreapp3.1\Vehicle.Service.Common.csproj.CopyComplete
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Service.Common\bin\Debug\netcoreapp3.1\Vehicle.DAL.dll
+E:\CODE\Vehicle.API\Vehicle\Vehicle.Service.Common\bin\Debug\netcoreapp3.1\Vehicle.DAL.pdb

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vehicle.DAL.Data;
+using Vehicle.DAL.Entity;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 
@@ -28,32 +29,32 @@ namespace Vehicle.Repository.Models
 
         public async Task<int> DeleteModelAsync(int id)
         {
-            var vehicleModel = await _db.VehicleModels.FirstOrDefaultAsync(x => x.Id == id);
+            var vehicleModel = await _db.VehicleModelsEntity.FirstOrDefaultAsync(x => x.Id == id);
 
-            _db.VehicleModels.Remove(vehicleModel);
+            _db.VehicleModelsEntity.Remove(vehicleModel);
             var numberOfDeleted = await _db.SaveChangesAsync();
             return numberOfDeleted;
 
         }
 
-        public async Task<IEnumerable<VehicleModel>> GetAllModelsAsync(int makeId)
+        public async Task<IEnumerable<VehicleModelEntity>> GetAllModelsAsync(int makeId)
         {
-            return await _db.VehicleModels.ToListAsync();
+            return await _db.VehicleModelsEntity.ToListAsync();
         }
 
 
-        public async Task<VehicleModel> GetModelByIdAsync(int id)
+        public async Task<VehicleModelEntity> GetModelByIdAsync(int id)
         {
-            var vehicleModel = await _db.VehicleModels.FirstOrDefaultAsync(o => o.Id == id);
+            var vehicleModel = await _db.VehicleModelsEntity.FirstOrDefaultAsync(o => o.Id == id);
             if (vehicleModel == null)
             {
                 throw new Exception();
             }
             return vehicleModel;
         }
-        public async Task<VehicleMake> GetVehicleMakeAsync(int id)
+        public async Task<VehicleMakeEntity> GetVehicleMakeAsync(int id)
         {
-            var vehicleMake = await _db.VehicleMakes
+            var vehicleMake = await _db.VehicleMakesEntity
                .FirstOrDefaultAsync(m => m.Id == id);
             if (vehicleMake == null)
             {

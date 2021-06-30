@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Vehicle.Common.Paging;
 using Vehicle.Common.Paiging;
 using Vehicle.DAL.Data;
+using Vehicle.DAL.Entity;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 
@@ -29,28 +30,28 @@ namespace Vehicle.Repository.Models
 
         public async Task<int> DeleteMakeAsync(int id)
         {
-            var vehicleMake = await _db.VehicleMakes.FirstOrDefaultAsync(x => x.Id == id);
+            var vehicleMake = await _db.VehicleMakesEntity.FirstOrDefaultAsync(x => x.Id == id);
             if (vehicleMake == null)
             {
                 throw new Exception("Not found");
             }
-            _db.VehicleMakes.Remove(vehicleMake);
+            _db.VehicleMakesEntity.Remove(vehicleMake);
             var numberOfDeleted = await _db.SaveChangesAsync();
             return numberOfDeleted;
         }
 
-        public async Task<IEnumerable<VehicleMake>> GetAllMakesAsync(PagingParameters pagingParameters)
+        public async Task<IEnumerable<VehicleMakeEntity>> GetAllMakesAsync(PagingParameters pagingParameters)
         {
             var pageSize = pagingParameters.PageSize;
             var pageNumber = pagingParameters.PageNumber;
 
-            return await _db.VehicleMakes.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+            return await _db.VehicleMakesEntity.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
         }
 
 
-        public async Task<VehicleMake> GetMakeByIdAsync(int id)
+        public async Task<VehicleMakeEntity> GetMakeByIdAsync(int id)
         {
-            var vehicleMake = await _db.VehicleMakes.FirstOrDefaultAsync(m => m.Id == id);
+            var vehicleMake = await _db.VehicleMakesEntity.FirstOrDefaultAsync(m => m.Id == id);
             if (vehicleMake == null)
             {
                 throw new Exception();

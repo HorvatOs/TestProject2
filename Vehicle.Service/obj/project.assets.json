@@ -3193,6 +3193,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
           "ReflectionIT.Mvc.Paging": "3.1.0",
           "Vehicle.Common": "1.0.0",
+          "Vehicle.DAL": "1.0.0",
           "Vehicle.Model": "1.0.0"
         },
         "compile": {
@@ -3211,6 +3212,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
           "ReflectionIT.Mvc.Paging": "3.1.0",
           "Vehicle.Common": "1.0.0",
+          "Vehicle.DAL": "1.0.0",
           "Vehicle.Model": "1.0.0"
         },
         "compile": {

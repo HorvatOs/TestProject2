@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vehicle.Common.Paging;
 using Vehicle.Common.Paiging;
+using Vehicle.DAL.Entity;
 using Vehicle.Model.Common.Interface;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
@@ -23,7 +24,7 @@ namespace Vehicle.Service.Service
 
 
 
-        public async Task<VehicleMake> GetMakeByIdServiceAsync (int id)
+        public async Task<VehicleMakeEntity> GetMakeByIdServiceAsync (int id)
         {
             return await VehicleMakeRepository.GetMakeByIdAsync(id);
         }
@@ -38,7 +39,7 @@ namespace Vehicle.Service.Service
             return await VehicleMakeRepository.DeleteMakeAsync(id);
         }
 
-        public async Task<IEnumerable<VehicleMake>> GetAllMakesServiceAsync(PagingParameters pagingParameters)
+        public async Task<IEnumerable<VehicleMakeEntity>> GetAllMakesServiceAsync(PagingParameters pagingParameters)
         {
             return await VehicleMakeRepository.GetAllMakesAsync(pagingParameters);
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Vehicle.DAL.Entity;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 using Vehicle.Repository.Models;
@@ -20,12 +21,12 @@ namespace Vehicle.Service.Service
 
 
 
-        public async Task<VehicleModel> GetModelByIdServiceAsync (int id)
+        public async Task<VehicleModelEntity> GetModelByIdServiceAsync (int id)
         {
             return await VehicleModelRepository.GetModelByIdAsync(id);
         }
 
-        public async Task<IEnumerable<VehicleModel>> GetAllModelsServiceAsync (int makeId)
+        public async Task<IEnumerable<VehicleModelEntity>> GetAllModelsServiceAsync (int makeId)
         {
             return await VehicleModelRepository.GetAllModelsAsync(makeId);
         }
@@ -45,7 +46,7 @@ namespace Vehicle.Service.Service
             return await VehicleModelRepository.UpdateModelAsync(vehicleModel);
         }
 
-        public async Task<VehicleMake> GetVehicleMakeServiceAsync (int id)
+        public async Task<VehicleMakeEntity> GetVehicleMakeServiceAsync (int id)
         {
             return await VehicleModelRepository.GetVehicleMakeAsync(id);
         }

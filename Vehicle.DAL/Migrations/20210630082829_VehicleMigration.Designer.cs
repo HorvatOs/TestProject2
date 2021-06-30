@@ -9,7 +9,7 @@ using Vehicle.DAL.Data;
 namespace Vehicle.WebAPI.Migrations
 {
     [DbContext(typeof(VehicleContext))]
-    [Migration("20210608190700_VehicleMigration")]
+    [Migration("20210630082829_VehicleMigration")]
     partial class VehicleMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace Vehicle.WebAPI.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Vehicle.Model.Models.VehicleMake", b =>
+            modelBuilder.Entity("Vehicle.DAL.Entity.VehicleMakeEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace Vehicle.WebAPI.Migrations
                     b.ToTable("VehicleMakes");
                 });
 
-            modelBuilder.Entity("Vehicle.Model.Models.VehicleModel", b =>
+            modelBuilder.Entity("Vehicle.DAL.Entity.VehicleModelEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,9 +63,9 @@ namespace Vehicle.WebAPI.Migrations
                     b.ToTable("VehicleModels");
                 });
 
-            modelBuilder.Entity("Vehicle.Model.Models.VehicleModel", b =>
+            modelBuilder.Entity("Vehicle.DAL.Entity.VehicleModelEntity", b =>
                 {
-                    b.HasOne("Vehicle.Model.Models.VehicleMake", "VehicleMake")
+                    b.HasOne("Vehicle.DAL.Entity.VehicleMakeEntity", "VehicleMake")
                         .WithMany("VehicleModels")
                         .HasForeignKey("MakeId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -74,7 +74,7 @@ namespace Vehicle.WebAPI.Migrations
                     b.Navigation("VehicleMake");
                 });
 
-            modelBuilder.Entity("Vehicle.Model.Models.VehicleMake", b =>
+            modelBuilder.Entity("Vehicle.DAL.Entity.VehicleMakeEntity", b =>
                 {
                     b.Navigation("VehicleModels");
                 });

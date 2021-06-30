@@ -3114,6 +3114,23 @@
           "bin/placeholder/Vehicle.Common.dll": {}
         }
       },
+      "Vehicle.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ReflectionIT.Mvc.Paging": "3.1.0",
+          "Vehicle.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Vehicle.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vehicle.DAL.dll": {}
+        }
+      },
       "Vehicle.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -9563,6 +9580,11 @@
       "path": "../Vehicle.Common/Vehicle.Common.csproj",
       "msbuildProject": "../Vehicle.Common/Vehicle.Common.csproj"
     },
+    "Vehicle.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Vehicle.DAL/Vehicle.DAL.csproj",
+      "msbuildProject": "../Vehicle.DAL/Vehicle.DAL.csproj"
+    },
     "Vehicle.Model/1.0.0": {
       "type": "project",
       "path": "../Vehicle.Model/Vehicle.Model.csproj",
@@ -9583,6 +9605,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.7",
       "ReflectionIT.Mvc.Paging >= 3.1.0",
       "Vehicle.Common >= 1.0.0",
+      "Vehicle.DAL >= 1.0.0",
       "Vehicle.Model >= 1.0.0"
     ]
   },
@@ -9614,6 +9637,9 @@
           "projectReferences": {
             "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
               "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj"
+            },
+            "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj": {
+              "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj"
             },
             "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
               "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj"

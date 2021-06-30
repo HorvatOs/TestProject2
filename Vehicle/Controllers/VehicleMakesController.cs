@@ -9,7 +9,7 @@ using Vehicle.Common.Paging;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 using Vehicle.Service.Common.Interface;
-using Vehicle.Service.Service;
+//using Vehicle.Service.Service;
 using Vehicle.WebAPI.Dtos;
 
 namespace Vehicle.WebAPI.Controllers

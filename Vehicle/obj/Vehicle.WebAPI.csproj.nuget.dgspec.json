@@ -366,6 +366,9 @@
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj"
               },
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj"
+              },
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj"
               }
@@ -635,6 +638,9 @@
             "projectReferences": {
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Common\\Vehicle.Common.csproj"
+              },
+              "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj": {
+                "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.DAL\\Vehicle.DAL.csproj"
               },
               "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj": {
                 "projectPath": "E:\\CODE\\Vehicle.API\\Vehicle\\Vehicle.Model\\Vehicle.Model.csproj"

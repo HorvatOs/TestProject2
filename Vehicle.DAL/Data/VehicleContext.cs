@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Vehicle.DAL.Entity;
 using Vehicle.Model.Models;
 
 namespace Vehicle.DAL.Data
@@ -16,9 +13,9 @@ namespace Vehicle.DAL.Data
 
         }
 
-        public DbSet<VehicleMake> VehicleMakes { get; set; }
+        public DbSet<VehicleMakeEntity> VehicleMakesEntity { get; set; }
 
-        public DbSet<VehicleModel> VehicleModels { get; set; }
+        public DbSet<VehicleModelEntity> VehicleModelsEntity { get; set; }
 
 
     }
