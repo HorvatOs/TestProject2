@@ -7,8 +7,10 @@ namespace Vehicle.Common.Paiging
 {
     public interface IPagingParameters
     {
-        public int PageSize { get; set; }
-        public int PageNumber { get; set; }
-        public string Sort { get; set; }
+        int PageSize { get; set; }
+        int PageNumber { get; set; }
+        string Sort { get; set; }
+        string Filter { get; set; }
+
     }
 }

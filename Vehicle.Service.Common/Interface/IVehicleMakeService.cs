@@ -14,8 +14,8 @@ namespace Vehicle.Service.Common.Interface
     {
         Task<IEnumerable<IVehicleMake>> GetAllMakesServiceAsync(PagingParameters pagingParameters);
         Task<IVehicleMake> GetMakeByIdServiceAsync(int id);
-        Task<int> CreateMakeServiceAsync(VehicleMake vehicleMake);
-        Task<int> UpdateMakeServiceAsync(VehicleMake vehicleMake);
+        Task<int> CreateMakeServiceAsync(IVehicleMake vehicleMake);
+        Task<int> UpdateMakeServiceAsync(IVehicleMake vehicleMake);
         Task<int> DeleteMakeServiceAsync(int id);
     }
 }

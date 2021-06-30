@@ -26,9 +26,9 @@ namespace Vehicle.Repository.Models
 
 
 
-        public async Task<int> CreateMakeAsync(VehicleMake vehicleMake)
+        public async Task<int> CreateMakeAsync(IVehicleMake vehicleMake)
         {
-            _db.Add(vehicleMake);
+            _db.Add(_mapper.Map<VehicleMakeEntity>(vehicleMake));
             var numberOfCreated = await _db.SaveChangesAsync();
             return numberOfCreated;
         }
@@ -51,8 +51,8 @@ namespace Vehicle.Repository.Models
         {
             var pageSize = pagingParameters.PageSize;
             var pageNumber = pagingParameters.PageNumber;
-
-            return _mapper.Map<IEnumerable<IVehicleMake>>(await _db.VehicleMakesEntity.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync());
+            var makes = await _db.VehicleMakesEntity.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+            return _mapper.Map<IEnumerable<IVehicleMake>>(makes);
         }
 
 
@@ -67,11 +67,10 @@ namespace Vehicle.Repository.Models
         }
 
 
-        public async Task<int> UpdateMakeAsync(VehicleMake vehicleMake)
+        public async Task<int> UpdateMakeAsync(IVehicleMake vehicleMake)
         {
-            _db.Update(vehicleMake);
+            _db.Update(_mapper.Map<VehicleMakeEntity>(vehicleMake));
             var numberOfChanges = await _db.SaveChangesAsync();
-
             return numberOfChanges;
         }
     }

@@ -12,8 +12,8 @@ namespace Vehicle.Service.Common.Interface
     {
         Task<IEnumerable<IVehicleModel>> GetAllModelsServiceAsync(int makeId);
         Task<IVehicleModel> GetModelByIdServiceAsync(int id);
-        Task<int> CreateModelServiceAsync(VehicleModel vehicleModel);
-        Task<int> UpdateModelServiceAsync(VehicleModel vehicleModel);
+        Task<int> CreateModelServiceAsync(IVehicleModel vehicleModel);
+        Task<int> UpdateModelServiceAsync(IVehicleModel vehicleModel);
         Task<int> DeleteModelServiceAsync(int id);
         Task<IVehicleMake> GetVehicleMakeServiceAsync(int id);
     }

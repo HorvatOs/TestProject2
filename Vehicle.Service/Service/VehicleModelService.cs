@@ -36,7 +36,7 @@ namespace Vehicle.Service.Service
         }
 
 
-        public async Task<int> CreateModelServiceAsync (VehicleModel vehicleModel)
+        public async Task<int> CreateModelServiceAsync (IVehicleModel vehicleModel)
         {
             return await VehicleModelRepository.CreateModelAsync(vehicleModel);
         }
@@ -48,7 +48,7 @@ namespace Vehicle.Service.Service
         }
 
 
-        public async Task<int> UpdateModelServiceAsync (VehicleModel vehicleModel)
+        public async Task<int> UpdateModelServiceAsync (IVehicleModel vehicleModel)
         {
             return await VehicleModelRepository.UpdateModelAsync(vehicleModel);
         }

@@ -29,8 +29,11 @@ namespace Vehicle.WebAPI.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakesAsync(PagingParameters pagingParameters)
+        public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakesAsync(int pageSize = 15, int pageNumber = 1, string sort = "", string filter = "")
         {
+            PagingParameters pagingParameters = new PagingParameters();
+            pagingParameters.PageNumber = pageNumber;
+            pagingParameters.PageSize = pageSize;
             var makeItems = await _vehicleMakeService.GetAllMakesServiceAsync(pagingParameters);
             return Ok(_mapper.Map<IEnumerable<MakeReadDto>>(makeItems));
         }
@@ -54,10 +57,8 @@ namespace Vehicle.WebAPI.Controllers
         {
             var makeModel = _mapper.Map<VehicleMake>(makeCreateDto);
             await _vehicleMakeService.CreateMakeServiceAsync(makeModel);
-
             var makeReadDto = _mapper.Map<MakeReadDto>(makeModel);
-
-            return CreatedAtRoute(nameof(GetMakeByIdAsync), new { Id = makeReadDto.Id }, makeReadDto);
+            return Ok(makeReadDto);
         }
 
 

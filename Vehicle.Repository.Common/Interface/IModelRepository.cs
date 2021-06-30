@@ -12,8 +12,8 @@ namespace Vehicle.Repository.Common.Interface
     {
         Task<IEnumerable<IVehicleModel>> GetAllModelsAsync(int makeId);
         Task<IVehicleModel> GetModelByIdAsync(int id);
-        Task<int> CreateModelAsync(VehicleModel vehicleModel);
-        Task<int> UpdateModelAsync(VehicleModel vehicleModel);
+        Task<int> CreateModelAsync(IVehicleModel vehicleModel);
+        Task<int> UpdateModelAsync(IVehicleModel vehicleModel);
         Task<int> DeleteModelAsync(int id);
         Task<IVehicleMake> GetVehicleMakeAsync(int id);
     }

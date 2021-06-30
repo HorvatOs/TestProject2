@@ -15,8 +15,8 @@ namespace Vehicle.Repository.Common.Interface
     {
         Task<IEnumerable<IVehicleMake>> GetAllMakesAsync(PagingParameters pagingParameters);
         Task<IVehicleMake> GetMakeByIdAsync(int id);
-        Task<int> CreateMakeAsync(VehicleMake vehicleMake);
-        Task<int> UpdateMakeAsync(VehicleMake vehicleMake);
+        Task<int> CreateMakeAsync(IVehicleMake vehicleMake);
+        Task<int> UpdateMakeAsync(IVehicleMake vehicleMake);
         Task<int> DeleteMakeAsync(int id);
     }
 }

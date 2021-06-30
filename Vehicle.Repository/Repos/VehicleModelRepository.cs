@@ -25,9 +25,9 @@ namespace Vehicle.Repository.Models
 
 
 
-        public async Task<int> CreateModelAsync(VehicleModel vehicleModel)
+        public async Task<int> CreateModelAsync(IVehicleModel vehicleModel)
         {
-            _db.Add(vehicleModel);
+            _db.Add(_mapper.Map<VehicleModelEntity>(vehicleModel));
             var numberOfCreated = await _db.SaveChangesAsync();
             return numberOfCreated;
         }
@@ -72,9 +72,9 @@ namespace Vehicle.Repository.Models
         }
 
 
-        public async Task<int> UpdateModelAsync(VehicleModel vehicleModel)
+        public async Task<int> UpdateModelAsync(IVehicleModel vehicleModel)
         {
-            _db.Update(vehicleModel);
+            _db.Update(_mapper.Map<VehicleModelEntity>(vehicleModel));
             var numberOfChanges = await _db.SaveChangesAsync();
 
             return numberOfChanges;

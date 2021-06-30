@@ -32,7 +32,7 @@ namespace Vehicle.Service.Service
         }
 
 
-        public async Task<int> CreateMakeServiceAsync (VehicleMake vehicleMake)
+        public async Task<int> CreateMakeServiceAsync (IVehicleMake vehicleMake)
         {
             return await VehicleMakeRepository.CreateMakeAsync(vehicleMake);
         }
@@ -50,7 +50,7 @@ namespace Vehicle.Service.Service
         }
 
 
-        public async Task<int> UpdateMakeServiceAsync (VehicleMake vehicleMake)
+        public async Task<int> UpdateMakeServiceAsync (IVehicleMake vehicleMake)
         {
             return await VehicleMakeRepository.UpdateMakeAsync(vehicleMake);
         }
