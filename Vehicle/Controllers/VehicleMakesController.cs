@@ -9,7 +9,7 @@ using Vehicle.Common.Paging;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 using Vehicle.Service.Common.Interface;
-//using Vehicle.Service.Service;
+using Vehicle.Service.Service;
 using Vehicle.WebAPI.Dtos;
 
 namespace Vehicle.WebAPI.Controllers
@@ -19,14 +19,14 @@ namespace Vehicle.WebAPI.Controllers
     public class VehicleMakesController : Controller
     {
         private readonly IVehicleMakeService _vehicleMakeService;
-
         public IMapper _mapper { get; }
-
         public VehicleMakesController(IVehicleMakeService vehicleMakeService, IMapper mapper)
         {
             _vehicleMakeService = vehicleMakeService;
             _mapper = mapper;
         }
+
+
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MakeReadDto>>> GetAllMakesAsync(PagingParameters pagingParameters)
@@ -34,6 +34,7 @@ namespace Vehicle.WebAPI.Controllers
             var makeItems = await _vehicleMakeService.GetAllMakesServiceAsync(pagingParameters);
             return Ok(_mapper.Map<IEnumerable<MakeReadDto>>(makeItems));
         }
+
 
         [HttpGet("{id}", Name = "GetMakeById")]
         public async Task<ActionResult<MakeReadDto>> GetMakeByIdAsync(int id)
@@ -47,6 +48,7 @@ namespace Vehicle.WebAPI.Controllers
             return NotFound();
         }
 
+
         [HttpPost]
         public async Task<ActionResult<MakeReadDto>> CreateMakeAsync(MakeCreateDto makeCreateDto)
         {
@@ -57,6 +59,7 @@ namespace Vehicle.WebAPI.Controllers
 
             return CreatedAtRoute(nameof(GetMakeByIdAsync), new { Id = makeReadDto.Id }, makeReadDto);
         }
+
 
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateMakeAsync(int id, MakeUpdateDto makeUpdateDto)
@@ -72,6 +75,7 @@ namespace Vehicle.WebAPI.Controllers
             }
             return Ok();
         }
+
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteMakeAsync(int id)

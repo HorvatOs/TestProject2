@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Vehicle.Model.Common.Interface;
 using Vehicle.Model.Models;
 using Vehicle.WebAPI.Dtos;
 

@@ -17,14 +17,14 @@ namespace Vehicle.WebAPI.Controllers
     public class VehicleModelsController : Controller
     {
         private readonly IVehicleModelService _vehicleModelService;
-
         public IMapper _mapper { get; }
-
         public VehicleModelsController(IVehicleModelService vehicleModelService, IMapper mapper)
         {
             _vehicleModelService = vehicleModelService;
             _mapper = mapper;
         }
+
+
 
         [HttpGet]
         public async Task<ActionResult> GetAllModelsAsync(int makeId)
@@ -32,6 +32,7 @@ namespace Vehicle.WebAPI.Controllers
             var modelItems = await _vehicleModelService.GetAllModelsServiceAsync(makeId);
             return Ok(_mapper.Map<IEnumerable<ModelReadDto>>(modelItems));
         }
+
 
         [HttpGet("{id}", Name = "GetModelById")]
         public async Task<ActionResult<ModelReadDto>> GetModelByIdAsync(int id)
@@ -45,6 +46,7 @@ namespace Vehicle.WebAPI.Controllers
             return NotFound();
         }
 
+
         [HttpPost]
         public async Task<ActionResult<ModelReadDto>> CreateModelAsync(ModelCreateDto modelCreateDto)
         {
@@ -55,6 +57,7 @@ namespace Vehicle.WebAPI.Controllers
 
             return CreatedAtRoute(nameof(GetModelByIdAsync), new { modelReadDto.Id }, modelReadDto);
         }
+
 
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateModelAsync(int id, ModelUpdateDto modelUpdateDto)
@@ -70,6 +73,7 @@ namespace Vehicle.WebAPI.Controllers
             }
             return Ok();
         }
+
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteModelAsync(int id)

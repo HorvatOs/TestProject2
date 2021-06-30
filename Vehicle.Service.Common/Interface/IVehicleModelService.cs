@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Vehicle.DAL.Entity;
+using Vehicle.Model.Common.Interface;
 using Vehicle.Model.Models;
 
 namespace Vehicle.Service.Common.Interface
 {
     public interface IVehicleModelService
     {
-        Task<IEnumerable<VehicleModelEntity>> GetAllModelsServiceAsync(int makeId);
-        Task<VehicleModelEntity> GetModelByIdServiceAsync(int id);
+        Task<IEnumerable<IVehicleModel>> GetAllModelsServiceAsync(int makeId);
+        Task<IVehicleModel> GetModelByIdServiceAsync(int id);
         Task<int> CreateModelServiceAsync(VehicleModel vehicleModel);
         Task<int> UpdateModelServiceAsync(VehicleModel vehicleModel);
         Task<int> DeleteModelServiceAsync(int id);
-        Task<VehicleMakeEntity> GetVehicleMakeServiceAsync(int id);
+        Task<IVehicleMake> GetVehicleMakeServiceAsync(int id);
     }
 }

@@ -10,11 +10,11 @@ namespace Vehicle.Repository.Common.Interface
 {
     public interface IModelRepository
     {
-        Task<IEnumerable<VehicleModelEntity>> GetAllModelsAsync(int makeId);
-        Task<VehicleModelEntity> GetModelByIdAsync(int id);
+        Task<IEnumerable<IVehicleModel>> GetAllModelsAsync(int makeId);
+        Task<IVehicleModel> GetModelByIdAsync(int id);
         Task<int> CreateModelAsync(VehicleModel vehicleModel);
         Task<int> UpdateModelAsync(VehicleModel vehicleModel);
         Task<int> DeleteModelAsync(int id);
-        Task<VehicleMakeEntity> GetVehicleMakeAsync(int id);
+        Task<IVehicleMake> GetVehicleMakeAsync(int id);
     }
 }

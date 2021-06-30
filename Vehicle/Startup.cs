@@ -39,7 +39,7 @@ namespace Vehicle
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddTransient<VehicleModel, VehicleModel>();
+            services.AddTransient<IVehicleModel, VehicleModel>();
             services.AddTransient<IVehicleMake, VehicleMake>();
             services.AddTransient<IMakeRepository, VehicleMakeRepository>();
             services.AddTransient<IModelRepository, VehicleModelRepository>();

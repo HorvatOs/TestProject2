@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vehicle.DAL.Data;
 using Vehicle.DAL.Entity;
+using Vehicle.Model.Common.Interface;
 using Vehicle.Model.Models;
 using Vehicle.Repository.Common.Interface;
 
@@ -14,11 +16,14 @@ namespace Vehicle.Repository.Models
     public class VehicleModelRepository : IModelRepository
     {
         private readonly VehicleContext _db;
-
-        public VehicleModelRepository(VehicleContext db)
+        private readonly IMapper _mapper;
+        public VehicleModelRepository(VehicleContext db, IMapper mapper)
         {
             _db = db;
+            _mapper = mapper;
         }
+
+
 
         public async Task<int> CreateModelAsync(VehicleModel vehicleModel)
         {
@@ -27,6 +32,7 @@ namespace Vehicle.Repository.Models
             return numberOfCreated;
         }
 
+
         public async Task<int> DeleteModelAsync(int id)
         {
             var vehicleModel = await _db.VehicleModelsEntity.FirstOrDefaultAsync(x => x.Id == id);
@@ -34,25 +40,27 @@ namespace Vehicle.Repository.Models
             _db.VehicleModelsEntity.Remove(vehicleModel);
             var numberOfDeleted = await _db.SaveChangesAsync();
             return numberOfDeleted;
-
         }
 
-        public async Task<IEnumerable<VehicleModelEntity>> GetAllModelsAsync(int makeId)
+
+        public async Task<IEnumerable<IVehicleModel>> GetAllModelsAsync(int makeId)
         {
-            return await _db.VehicleModelsEntity.ToListAsync();
+            return (IEnumerable<IVehicleModel>)await _db.VehicleModelsEntity.ToListAsync();
         }
 
 
-        public async Task<VehicleModelEntity> GetModelByIdAsync(int id)
+        public async Task<IVehicleModel> GetModelByIdAsync(int id)
         {
             var vehicleModel = await _db.VehicleModelsEntity.FirstOrDefaultAsync(o => o.Id == id);
             if (vehicleModel == null)
             {
                 throw new Exception();
             }
-            return vehicleModel;
+            return (_mapper.Map<IVehicleModel>(vehicleModel));
         }
-        public async Task<VehicleMakeEntity> GetVehicleMakeAsync(int id)
+
+
+        public async Task<IVehicleMake> GetVehicleMakeAsync(int id)
         {
             var vehicleMake = await _db.VehicleMakesEntity
                .FirstOrDefaultAsync(m => m.Id == id);
@@ -60,8 +68,9 @@ namespace Vehicle.Repository.Models
             {
                 throw new Exception("Vehicle Make not found");
             }
-            return vehicleMake;
+            return (_mapper.Map<IVehicleMake>(vehicleMake));
         }
+
 
         public async Task<int> UpdateModelAsync(VehicleModel vehicleModel)
         {

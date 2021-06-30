@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,34 +16,39 @@ namespace Vehicle.Service.Service
 {
     public class VehicleMakeService : IVehicleMakeService
     {
-        public VehicleMakeService(IMakeRepository vehicleMakeRepository)
+        public VehicleMakeService(IMakeRepository vehicleMakeRepository, IMapper mapper)
         {
             VehicleMakeRepository = vehicleMakeRepository;
+            _mapper = mapper;
         }
-
         public IMakeRepository VehicleMakeRepository { get; set; }
+        private readonly IMapper _mapper;
 
 
 
-        public async Task<VehicleMakeEntity> GetMakeByIdServiceAsync (int id)
+        public async Task<IVehicleMake> GetMakeByIdServiceAsync (int id)
         {
-            return await VehicleMakeRepository.GetMakeByIdAsync(id);
+            return _mapper.Map<IVehicleMake>(await VehicleMakeRepository.GetMakeByIdAsync(id));
         }
+
 
         public async Task<int> CreateMakeServiceAsync (VehicleMake vehicleMake)
         {
             return await VehicleMakeRepository.CreateMakeAsync(vehicleMake);
         }
 
+
         public async Task<int> DeleteMakeServiceAsync (int id)
         {
             return await VehicleMakeRepository.DeleteMakeAsync(id);
         }
 
-        public async Task<IEnumerable<VehicleMakeEntity>> GetAllMakesServiceAsync(PagingParameters pagingParameters)
+
+        public async Task<IEnumerable<IVehicleMake>> GetAllMakesServiceAsync(PagingParameters pagingParameters)
         {
-            return await VehicleMakeRepository.GetAllMakesAsync(pagingParameters);
+            return _mapper.Map<IEnumerable<IVehicleMake>>(await VehicleMakeRepository.GetAllMakesAsync(pagingParameters));
         }
+
 
         public async Task<int> UpdateMakeServiceAsync (VehicleMake vehicleMake)
         {
